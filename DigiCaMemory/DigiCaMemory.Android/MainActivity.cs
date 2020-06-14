@@ -3,6 +3,7 @@ using Android.Content.PM;
 using Android.OS;
 using Prism;
 using Prism.Ioc;
+using Android.Views;
 
 namespace DigiCaMemory.Droid
 {
@@ -11,10 +12,21 @@ namespace DigiCaMemory.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            TabLayoutResource = Resource.Layout.Tabbar;
-            ToolbarResource = Resource.Layout.Toolbar;
+            // TabLayoutResource = Resource.Layout.Tabbar;
+            // ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
+
+
+            // 横画面に固定
+            this.RequestedOrientation = ScreenOrientation.SensorLandscape;
+            // スリープモードにしない制御
+            this.Window.SetFlags(WindowManagerFlags.KeepScreenOn, WindowManagerFlags.KeepScreenOn);
+
+            // 全画面
+            this.Window.AddFlags(WindowManagerFlags.Fullscreen);
+            // this.Window.ClearFlags(WindowManagerFlags.Fullscreen);
+
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);

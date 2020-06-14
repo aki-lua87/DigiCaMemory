@@ -4,8 +4,443 @@
              x:Class="DigiCaMemory.Views.MainPage"
              Title="{Binding Title}">
 
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="Welcome to Xamarin Forms and Prism!" />
-    </StackLayout>
+    <AbsoluteLayout BackgroundColor="#323232">
+
+        <Frame
+            Rotation="{Binding Rotation}"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.5, 0.5, AutoSize, AutoSize"
+            BackgroundColor="{Binding Color}"
+            OutlineColor="Black"
+            WidthRequest="150"
+            HeightRequest="150"
+            CornerRadius="75"
+            Padding="0">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer
+                    Command="{Binding Reset}" />
+            </Frame.GestureRecognizers>
+            <Label
+                Text="{Binding Memory}" 
+                FontSize="75"
+                TextColor="White"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+        </Frame>
+
+        <!-- 
+        <Frame
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.5, 0.5, AutoSize, AutoSize"
+            BackgroundColor="Gray"
+            OutlineColor="Navy"
+            WidthRequest="60"
+            HeightRequest="60"
+            CornerRadius="50"
+            Padding="0">
+            <Label
+                Text="0" 
+                FontSize="30"
+                TextColor="Black"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+        </Frame>
+
+        <Frame
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.4, 0.5, AutoSize, AutoSize"
+            BackgroundColor="Aquamarine"
+            OutlineColor="Navy"
+            WidthRequest="60"
+            HeightRequest="60"
+            CornerRadius="50"
+            Padding="0">
+            <Label
+                Text="1" 
+                FontSize="30"
+                TextColor="Black"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+        </Frame>
+        <Frame
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.3, 0.5, AutoSize, AutoSize"
+            BackgroundColor="Aquamarine"
+            OutlineColor="Navy"
+            WidthRequest="60"
+            HeightRequest="60"
+            CornerRadius="50"
+            Padding="0">
+            <Label
+                Text="2" 
+                FontSize="30"
+                TextColor="Black"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+        </Frame>
+        <Frame
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.2, 0.5, AutoSize, AutoSize"
+            BackgroundColor="Aquamarine"
+            OutlineColor="Navy"
+            WidthRequest="60"
+            HeightRequest="60"
+            CornerRadius="50"
+            Padding="0">
+            <Label
+                Text="3" 
+                FontSize="30"
+                TextColor="Black"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+        </Frame>
+        <Frame
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.1, 0.5, AutoSize, AutoSize"
+            BackgroundColor="Aquamarine"
+            OutlineColor="Navy"
+            WidthRequest="60"
+            HeightRequest="60"
+            CornerRadius="50"
+            Padding="0">
+            <Label
+                Text="4" 
+                FontSize="30"
+                TextColor="Black"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+        </Frame>
+        <Frame
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.0, 0.5, AutoSize, AutoSize"
+            BackgroundColor="Aquamarine"
+            OutlineColor="Navy"
+            WidthRequest="60"
+            HeightRequest="60"
+            CornerRadius="50"
+            Padding="0">
+            <Label
+                Text="5" 
+                FontSize="30"
+                TextColor="Black"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+        </Frame>
+        <Frame
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.0, 0.7, AutoSize, AutoSize"
+            BackgroundColor="Aquamarine"
+            OutlineColor="Navy"
+            WidthRequest="60"
+            HeightRequest="60"
+            CornerRadius="50"
+            Padding="0">
+            <Label
+                Text="6" 
+                FontSize="30"
+                TextColor="Black"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+        </Frame>
+        <Frame
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.1, 0.7, AutoSize, AutoSize"
+            BackgroundColor="Aquamarine"
+            OutlineColor="Navy"
+            WidthRequest="60"
+            HeightRequest="60"
+            CornerRadius="50"
+            Padding="0">
+            <Label
+                Text="7" 
+                FontSize="30"
+                TextColor="Black"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+        </Frame>
+        <Frame
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.2, 0.7, AutoSize, AutoSize"
+            BackgroundColor="Aquamarine"
+            OutlineColor="Navy"
+            WidthRequest="60"
+            HeightRequest="60"
+            CornerRadius="50"
+            Padding="0">
+            <Label
+                Text="8" 
+                FontSize="30"
+                TextColor="Black"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+        </Frame>
+        <Frame
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.3, 0.7, AutoSize, AutoSize"
+            BackgroundColor="Aquamarine"
+            OutlineColor="Navy"
+            WidthRequest="60"
+            HeightRequest="60"
+            CornerRadius="50"
+            Padding="0">
+            <Label
+                Text="9" 
+                FontSize="30"
+                TextColor="Black"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+        </Frame>
+        <Frame
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.4, 0.7, AutoSize, AutoSize"
+            BackgroundColor="Aquamarine"
+            OutlineColor="Navy"
+            WidthRequest="60"
+            HeightRequest="60"
+            CornerRadius="50"
+            Padding="0">
+            <Label
+                Text="10" 
+                FontSize="30"
+                TextColor="Black"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+        </Frame>
+
+
+        <Frame
+            Rotation="180"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.6, 0.5, AutoSize, AutoSize"
+            BackgroundColor="OrangeRed"
+            OutlineColor="Navy"
+            WidthRequest="60"
+            HeightRequest="60"
+            CornerRadius="50"
+            Padding="0">
+            <Label
+                Text="1" 
+                FontSize="30"
+                TextColor="Black"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+        </Frame>
+        <Frame
+            Rotation="180"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.7, 0.5, AutoSize, AutoSize"
+            BackgroundColor="OrangeRed"
+            OutlineColor="Navy"
+            WidthRequest="60"
+            HeightRequest="60"
+            CornerRadius="50"
+            Padding="0">
+            <Label
+                Text="2" 
+                FontSize="30"
+                TextColor="Black"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+        </Frame>
+        <Frame
+            Rotation="180"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.8, 0.5, AutoSize, AutoSize"
+            BackgroundColor="OrangeRed"
+            OutlineColor="Navy"
+            WidthRequest="60"
+            HeightRequest="60"
+            CornerRadius="50"
+            Padding="0">
+            <Label
+                Text="3" 
+                FontSize="30"
+                TextColor="Black"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+        </Frame>
+        <Frame
+            Rotation="180"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.9, 0.5, AutoSize, AutoSize"
+            BackgroundColor="OrangeRed"
+            OutlineColor="Navy"
+            WidthRequest="60"
+            HeightRequest="60"
+            CornerRadius="50"
+            Padding="0">
+            <Label
+                Text="4" 
+                FontSize="30"
+                TextColor="Black"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+        </Frame>
+        <Frame
+            Rotation="180"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="1, 0.5, AutoSize, AutoSize"
+            BackgroundColor="OrangeRed"
+            OutlineColor="Navy"
+            WidthRequest="60"
+            HeightRequest="60"
+            CornerRadius="50"
+            Padding="0">
+            <Label
+                Text="5" 
+                FontSize="30"
+                TextColor="Black"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+        </Frame>
+        <Frame
+            Rotation="180"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.6, 0.3, AutoSize, AutoSize"
+            BackgroundColor="OrangeRed"
+            OutlineColor="Navy"
+            WidthRequest="60"
+            HeightRequest="60"
+            CornerRadius="50"
+            Padding="0">
+            <Label
+                Text="10" 
+                FontSize="30"
+                TextColor="Black"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+        </Frame>
+        <Frame
+            Rotation="180"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.7, 0.3, AutoSize, AutoSize"
+            BackgroundColor="OrangeRed"
+            OutlineColor="Navy"
+            WidthRequest="60"
+            HeightRequest="60"
+            CornerRadius="50"
+            Padding="0">
+            <Label
+                Text="9" 
+                FontSize="30"
+                TextColor="Black"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+        </Frame>
+        <Frame
+            Rotation="180"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.8, 0.3, AutoSize, AutoSize"
+            BackgroundColor="OrangeRed"
+            OutlineColor="Navy"
+            WidthRequest="60"
+            HeightRequest="60"
+            CornerRadius="50"
+            Padding="0">
+            <Label
+                Text="8" 
+                FontSize="30"
+                TextColor="Black"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+        </Frame>
+        <Frame
+            Rotation="180"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.9, 0.3, AutoSize, AutoSize"
+            BackgroundColor="OrangeRed"
+            OutlineColor="Navy"
+            WidthRequest="60"
+            HeightRequest="60"
+            CornerRadius="50"
+            Padding="0">
+            <Label
+                Text="7" 
+                FontSize="30"
+                TextColor="Black"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+        </Frame>
+        <Frame
+            Rotation="180"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="1.0, 0.3, AutoSize, AutoSize"
+            BackgroundColor="OrangeRed"
+            OutlineColor="Navy"
+            WidthRequest="60"
+            HeightRequest="60"
+            CornerRadius="50"
+            Padding="0">
+            <Label
+                Text="6" 
+                FontSize="30"
+                TextColor="Black"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+        </Frame>
+        
+        -->
+        <!-- Right Button -->
+        <Button Text="+1"
+                TextColor="Wheat"
+                Command="{Binding UnderPlayer1UP}"
+                BackgroundColor="Blue"
+                AbsoluteLayout.LayoutFlags="All"
+                Rotation="0"
+                AbsoluteLayout.LayoutBounds="0.65, 0.95, 0.1, 0.15"/>
+        <Button Text="-1"
+                TextColor="Wheat"
+                Command="{Binding UnderPlayer1Down}"
+                BackgroundColor="Blue"
+                AbsoluteLayout.LayoutFlags="All"
+                Rotation="0"
+                AbsoluteLayout.LayoutBounds="0.76, 0.95, 0.1, 0.15"/>
+        <Button Text="-5"
+                TextColor="Wheat"
+                Command="{Binding UnderPlayer5Down}"
+                BackgroundColor="Blue"
+                AbsoluteLayout.LayoutFlags="All"
+                Rotation="0"
+                AbsoluteLayout.LayoutBounds="0.87, 0.95, 0.1, 0.15"/>
+        <Button Text="-10"
+                TextColor="Wheat"
+                Command="{Binding UnderPlayer10Down}"
+                BackgroundColor="Blue"
+                AbsoluteLayout.LayoutFlags="All"
+                Rotation="0"
+                AbsoluteLayout.LayoutBounds="0.98, 0.95, 0.1, 0.15"/>
+
+        <!-- Left Button -->
+        <Button Text="+1"
+                TextColor="Wheat"
+                Command="{Binding OverPlayer1UP}"
+                BackgroundColor="Red"
+                AbsoluteLayout.LayoutFlags="All"
+                Rotation="180"
+                AbsoluteLayout.LayoutBounds="0.35, 0.05, 0.1, 0.15"/>
+        <Button Text="-1"
+                TextColor="Wheat"
+                Command="{Binding OverPlayer1Down}"
+                BackgroundColor="Red"
+                AbsoluteLayout.LayoutFlags="All"
+                Rotation="180"
+                AbsoluteLayout.LayoutBounds="0.24, 0.05, 0.1, 0.15"/>
+        <Button Text="-5"
+                TextColor="Wheat"
+                Command="{Binding OverPlayer5Down}"
+                BackgroundColor="Red"
+                AbsoluteLayout.LayoutFlags="All"
+                Rotation="180"
+                AbsoluteLayout.LayoutBounds="0.13, 0.05, 0.1, 0.15"/>
+        <Button Text="-10"
+                TextColor="Wheat"
+                Command="{Binding OverPlayer10Down}"
+                BackgroundColor="Red"
+                AbsoluteLayout.LayoutFlags="All"
+                Rotation="180"
+                AbsoluteLayout.LayoutBounds="0.02, 0.05, 0.1, 0.15"/>
+
+    </AbsoluteLayout>
+
 
 </ContentPage>
