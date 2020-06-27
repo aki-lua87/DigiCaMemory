@@ -42,14 +42,7 @@ namespace DigiCaMemory.ViewModels
             Title = "Main Page";
             Color = "Black";
 
-            UnderPlayer1UP = new DelegateCommand(() => ChangeMemory(-1));
-            UnderPlayer1Down = new DelegateCommand(() => ChangeMemory(1));
-            UnderPlayer5Down = new DelegateCommand(() => ChangeMemory(5));
-            UnderPlayer10Down = new DelegateCommand(() => ChangeMemory(10));
-            OverPlayer1UP = new DelegateCommand(() => ChangeMemory(1));
-            OverPlayer1Down = new DelegateCommand(() => ChangeMemory(-1));
-            OverPlayer5Down = new DelegateCommand(() => ChangeMemory(-5));
-            OverPlayer10Down = new DelegateCommand(() => ChangeMemory(-10));
+            MemoryChangeCommand = new DelegateCommand<object>((args) => ChangeMemory(int.Parse(args.ToString())));
 
             Reset = new DelegateCommand(async() =>
             {
@@ -93,15 +86,7 @@ namespace DigiCaMemory.ViewModels
             Memory = Math.Abs(_metaMemory);
         }
 
-        public DelegateCommand UnderPlayer1UP { get; private set; }
-        public DelegateCommand UnderPlayer1Down { get; private set; }
-        public DelegateCommand UnderPlayer5Down { get; private set; }
-        public DelegateCommand UnderPlayer10Down { get; private set; }
-        public DelegateCommand OverPlayer1UP { get; private set; }
-        public DelegateCommand OverPlayer1Down { get; private set; }
-        public DelegateCommand OverPlayer5Down { get; private set; }
-        public DelegateCommand OverPlayer10Down { get; private set; }
-
         public DelegateCommand Reset { get; private set; }
+        public DelegateCommand<object> MemoryChangeCommand { get; private set; }
     }
 }
